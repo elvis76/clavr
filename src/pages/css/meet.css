@@ -154,7 +154,7 @@
 
 .meet .arena.grid {
     display: grid;
-    grid-template-columns: repeat(4, minmax(180px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
     gap: 20px;
 }
 
@@ -201,7 +201,7 @@
     height: 140px;
     position: absolute;
     border-radius: 15px;
-    top: 80%;
+    top: 77%;
     right: 30px;
 }
 
@@ -290,6 +290,13 @@
     background-color: #40e0d036;
 }
 
+@media screen and (min-width: 1200px) {
+    .meet .arena.grid {
+        grid-template-columns: repeat(4, minmax(180px, 1fr));
+    }
+
+}
+
 @media screen and (max-width: 1100px) {
     .meet nav > h2 {
         font-size: 20px;
@@ -306,9 +313,17 @@
         display: inline-flex;
         margin-left: auto;
     }
-
+    
     
     .meet nav .layout-actions {
+        display: none;
+    }
+    
+    .meet .tracking-display button span span {
+        display: none;
+    }
+
+    .meet footer > button {
         display: none;
     }
 }

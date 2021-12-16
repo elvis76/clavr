@@ -77,7 +77,7 @@ const Meet = ({ onGoing, toggleMenu } : { onGoing: boolean, toggleMenu: (value: 
                             <button>
                                 <ProfileAddIcon color='turquoise' />
                                 <span>
-                                    Invite a participant
+                                    Invite <span>a participant</span>
                                 </span>
                             </button>
 
