@@ -1,0 +1,51 @@
+.dashboard {
+    background-color: #161C21;
+    color: white;
+    height: 100vh;
+    display: grid;
+    grid-template-columns: 80px 1fr 350px;
+}
+
+.dashboard aside:first-child {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding-bottom: 30px;
+}
+
+.dashboard aside:first-child #logout {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    padding: 10px;
+}
+
+.dashboard aside:first-child > a {
+    padding: 20px;
+    display: inline-block;
+    width: 100%;
+}
+
+.dashboard aside:first-child > a img {
+    width: 100%;
+}
+
+.dashboard aside:first-child ul li a {
+    fill: white;
+    padding: 15px 20px;
+    display: inline-grid;
+    place-items: center;
+    width: 100%;
+}
+
+.dashboard aside:first-child ul li a.active {
+    fill: turquoise;
+    background-color: #1f272f75;
+}
+
+
+.dashboard aside:last-child {
+    background-color: #1F272F;
+    border-radius: 30px 0px 0px 30px;
+}

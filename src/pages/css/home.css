@@ -1,0 +1,15 @@
+.home {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #262a2e;
+}
+
+.home > button {
+    padding: 8px 15px;
+    cursor: pointer;
+    border: 1px solid turquoise;
+    color: turquoise;
+    background-color:  transparent;
+}
