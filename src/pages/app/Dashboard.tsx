@@ -11,6 +11,7 @@ import CalendarIcon from '../../components/icons/CalendarIcon'
 import NotificationIcon from '../../components/icons/NotificationIcon'
 import SettingIcon from '../../components/icons/SettingIcon'
 import LogoutIcon from '../../components/icons/LogoutIcon'
+import ScissorsIcon from '../../components/icons/ScissorsIcon'
 
 const Dashboard = () => {
     const navigate = useNavigate()
@@ -22,33 +23,37 @@ const Dashboard = () => {
                     <img src={Logo} alt="" />
                 </NavLink>
 
+                <button id='menu-close' onClick={() => setMenuOpen(!menuOpen)}>
+                    <ScissorsIcon color='white' />
+                </button>
+
                 <ul>
-                    <li>
+                    <li onClick={() => setMenuOpen(!menuOpen)}>
                         <NavLink to={'/dashboard/home'}>
                             <HomeIcon color='inherit' />
                         </NavLink>
                     </li>
-                    <li>
+                    <li onClick={() => setMenuOpen(!menuOpen)}>
                         <NavLink to={'/dashboard/meet'}>
                             <VideoIcon color='inherit' />
                         </NavLink>
                     </li>
-                    <li>
+                    <li onClick={() => setMenuOpen(!menuOpen)}>
                         <NavLink to={'/dashboard/groups'}>
                             <GroupsIcon color='inherit' />
                         </NavLink>
                     </li>
-                    <li>
+                    <li onClick={() => setMenuOpen(!menuOpen)}>
                         <NavLink to={'/dashboard/schedules'}>
                             <CalendarIcon color='inherit' />
                         </NavLink>
                     </li>
-                    <li>
+                    <li onClick={() => setMenuOpen(!menuOpen)}>
                         <NavLink to={'/dashboard/notifications'}>
                             <NotificationIcon color='inherit' />
                         </NavLink>
                     </li>
-                    <li>
+                    <li onClick={() => setMenuOpen(!menuOpen)}>
                         <NavLink to={'/dashboard/settings'}>
                             <SettingIcon color='inherit' />
                         </NavLink>

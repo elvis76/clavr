@@ -27,7 +27,7 @@ const Meet = ({ onGoing, toggleMenu } : { onGoing: boolean, toggleMenu: (value: 
     const [microphoneOn, setMicrophoneOn] = useState(true)
     const [speakerOn, setSpeakerOn] = useState(true)
     const [videoOn, setVideoOn] = useState(true)
-    const [callBtnHovered, setCallBtnHovered] = useState(true)
+    const [callBtnHovered, setCallBtnHovered] = useState(false)
     // const [singleItem, setSingleItem] = useState(false)
     // const [stageMode, setStageMode] = useState(false)
     // const [gridMode, setGridMode] = useState(false)
@@ -88,7 +88,7 @@ const Meet = ({ onGoing, toggleMenu } : { onGoing: boolean, toggleMenu: (value: 
                         </div>
                         <div className={`arena ${layoutType}`}>
                             {
-                                Array(5).fill(0).map((value: any, index: number) => {
+                                Array(4).fill(0).map((value: any, index: number) => {
                                     return (
                                         <div key={index} className='user-video-card'>
 

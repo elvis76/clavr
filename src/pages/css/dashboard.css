@@ -33,6 +33,10 @@
     width: 100%;
 }
 
+.dashboard aside:first-child #menu-close {
+    display: none;
+}
+
 .dashboard aside:first-child > a img {
     width: 100%;
 }
@@ -78,6 +82,18 @@
         background-color: #161C21;
         width: 100%;
         height: 100%;
+    }
+
+    .dashboard aside:first-child #menu-close {
+        display: inline-grid;
+        place-items: center;
+        position: absolute;
+        top: 20px;
+        right: 20px;
+        padding: 10px;
+        border: none;
+        border-radius: 5px;
+        background-color: #fff1;
     }
 
     .dashboard aside:first-child > a img {

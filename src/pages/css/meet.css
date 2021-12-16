@@ -154,7 +154,7 @@
 
 .meet .arena.grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
     gap: 20px;
 }
 
@@ -290,9 +290,9 @@
     background-color: #40e0d036;
 }
 
-@media screen and (min-width: 1200px) {
+@media screen and (min-width: 1300px) {
     .meet .arena.grid {
-        grid-template-columns: repeat(4, minmax(180px, 1fr));
+        grid-template-columns: repeat(2, minmax(180px, 1fr));
     }
 
 }
