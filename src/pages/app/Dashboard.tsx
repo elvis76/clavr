@@ -1,5 +1,5 @@
-import React from 'react'
-import { Routes, Route, NavLink } from 'react-router-dom'
+import { useState } from 'react'
+import { Routes, Route, NavLink, useNavigate } from 'react-router-dom'
 import Logo from '../../assets/images/logo.png'
 import Meet from './Meet'
 
@@ -13,9 +13,11 @@ import SettingIcon from '../../components/icons/SettingIcon'
 import LogoutIcon from '../../components/icons/LogoutIcon'
 
 const Dashboard = () => {
+    const navigate = useNavigate()
+    const [menuOpen, setMenuOpen] = useState(false)
     return (
         <div className='dashboard'>
-            <aside>
+            <aside style={{ left: menuOpen ? '0%' : '-100%' }}>
                 <NavLink to="/dashboard">
                     <img src={Logo} alt="" />
                 </NavLink>
@@ -53,16 +55,18 @@ const Dashboard = () => {
                     </li>
                 </ul>
 
-                <button id='logout'>
+                <button id='logout' onClick={() => navigate('/')}>
                     <LogoutIcon color='white' />
                 </button>
             </aside>
             <main>
                 <Routes>
-                    <Route path="/meet" element={<Meet />} />
+                    <Route path="/meet" element={<Meet onGoing={false} toggleMenu={(value: boolean) => setMenuOpen(value)} />} />
                 </Routes>
             </main>
-            <aside></aside>
+            <aside>
+                {/* <button></button> */}
+            </aside>
         </div>
     )
 }

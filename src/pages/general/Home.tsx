@@ -7,7 +7,7 @@ const Home = () => {
 
     return (
         <div className='home'>
-            <button onClick={() => navigate('/dashboard')}>
+            <button onClick={() => navigate('/dashboard/meet')}>
                 Launch App
             </button>
         </div>

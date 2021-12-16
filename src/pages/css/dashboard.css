@@ -3,7 +3,11 @@
     color: white;
     height: 100vh;
     display: grid;
-    grid-template-columns: 80px 1fr 350px;
+    grid-template-columns: auto 1fr auto;
+}
+
+.dashboard * {
+    transition: 0.5s;
 }
 
 .dashboard aside:first-child {
@@ -11,7 +15,9 @@
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    padding-bottom: 30px;
+    padding-bottom: 20px;
+    width: 80px;
+    position: static;
 }
 
 .dashboard aside:first-child #logout {
@@ -37,6 +43,7 @@
     display: inline-grid;
     place-items: center;
     width: 100%;
+    height: 100%;
 }
 
 .dashboard aside:first-child ul li a.active {
@@ -48,4 +55,50 @@
 .dashboard aside:last-child {
     background-color: #1F272F;
     border-radius: 30px 0px 0px 30px;
+    width: 350px;
+}
+
+@media screen and (max-width: 1100px) {
+    .dashboard aside:last-child {
+        position: fixed;
+        top: 0;
+        right: -100%;
+    }
+}
+
+@media screen and (max-width: 650px) {
+    .dashboard {
+        grid-template-columns: 1fr;
+    }
+
+    .dashboard aside:first-child {
+        position: fixed;
+        top: 0;
+        left: 0%;
+        background-color: #161C21;
+        width: 100%;
+        height: 100%;
+    }
+
+    .dashboard aside:first-child > a img {
+        width: 70px;
+    }
+
+    .dashboard aside:first-child ul {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        padding: 20px;
+        list-style: none;
+        gap: 20px;
+    }
+
+    .dashboard aside:first-child ul li {
+        height: 100px;
+        border-radius: 10px;
+        overflow: hidden;
+    }
+
+    .dashboard aside:first-child ul li a {
+        background-color: #1F272F;
+    }
 }

@@ -1,5 +1,314 @@
 .meet {
     background-color: #161C21;
     height: 100vh;
+    display: grid;
+
+    grid-template-rows: auto auto 1fr auto;
 }
 
+.meet nav {
+    display: flex;
+    align-items: center;
+    padding: 20px 5%;
+    gap: 15px;
+}
+
+.meet nav > button {
+    display: grid;
+    place-items: center;
+    padding: 5px;
+    cursor: pointer;
+    border-radius: 5px;
+    background-color: #fff1;
+    border: none;
+}
+
+.meet nav > h2 {
+    margin-top: 3px;
+}
+
+.meet nav > button:last-child {
+    display: none;
+}
+
+.meet nav .type-badge {
+    background-color: turquoise;
+    border-radius: 50px;
+    padding: 5px 18px;
+    color: #161C21;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.meet nav .type-badge svg {
+    width: 17px;
+}
+
+.meet nav .type-badge span {
+    margin-top: 2px;
+    font-weight: 500;
+}
+
+.meet nav .layout-actions {
+    margin-left: auto;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.meet nav .layout-actions button {
+    padding: 8px;
+    border: none;
+    cursor: pointer;
+    background-color: transparent;
+    border-radius: 5px;
+    display: grid;
+    place-items: center;
+    fill: white;
+}
+
+.meet nav .layout-actions button.active-action {
+    fill: turquoise;
+}
+
+.meet nav .layout-actions button:hover {
+    background-color: #fff2;
+}
+
+.meet .tracking-display {
+    padding: 0px 5%;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.meet .tracking-display button {
+    border: none;
+    cursor: pointer;
+    background-color: transparent;
+    font-weight: 500;
+    display: inline-flex;
+    align-items: center;
+    color: turquoise;
+    font-size: 17px;
+}
+
+.meet .tracking-display button span {
+    margin-top: 2px;
+}
+
+.meet .tracking-display .participants {
+    border: 1px solid white;
+    /* padding: 10px; */
+    border-radius: 50px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 80px;
+    height: 40px;
+    gap: 2px;
+    cursor: pointer;
+}
+
+.meet .tracking-display .participants svg {
+    width: 17px;
+}
+
+.meet .tracking-display .participants span {
+    margin-top: 3px;
+}
+
+.meet .tracking-display .duration {
+    border: 1px solid #FC5D5C;
+    /* padding: 10px; */
+    border-radius: 50px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 80px;
+    height: 40px;
+    gap: 5px;
+    cursor: pointer;
+    margin-left: auto;
+}
+
+.meet .tracking-display .duration .indicator {
+    background-color: #FC5D5C;
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+}
+
+.meet .tracking-display .duration span {
+    margin-top: 3px;
+}
+
+.meet .arena {
+    padding: 20px 5%;
+}
+
+.meet :is(.arena.grid, .arena.stage) .user-count-card {
+    display: none;
+}
+
+.meet .arena.grid {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(180px, 1fr));
+    gap: 20px;
+}
+
+.meet .arena.grid .user-video-card {
+    background-color: #222a30;
+    border-radius: 15px;
+}
+
+.meet .arena.stage {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+    grid-template-rows: 1fr 120px;
+    gap: 20px;
+}
+
+.meet .arena.stage .user-video-card:first-child {
+    grid-column: 1 / -1;
+}
+
+.meet .arena.stage .user-video-card {
+    background-color: #222a30;
+    border-radius: 15px;
+}
+
+.meet .arena.single {
+    position: relative;
+}
+
+.meet .arena.single .user-video-card {
+    background-color: #222a30;
+    border-radius: 15px;
+    width: 100%;
+    height: 100%;
+}
+
+.meet .arena.single .user-video-card:not(:first-child) {
+    display: none;
+}
+
+.meet .arena.single .user-count-card {
+    background-color: #222a30;
+    box-shadow: 0 0 15px #111111c7;
+    width: 180px;
+    height: 140px;
+    position: absolute;
+    border-radius: 15px;
+    top: 80%;
+    right: 30px;
+}
+
+.meet footer {
+    padding: 20px 5%;
+    display: flex;
+    align-items: center;
+}
+
+.meet footer > button {
+    border: none;
+    cursor: pointer;
+    background-color: transparent;
+    color: turquoise;
+    font-size: 17px;
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.meet footer > button svg {
+    width: 20px;
+}
+
+.meet footer > button span {
+    margin-top: 3px;
+}
+
+.meet footer .action-bar {
+    margin: auto;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.meet footer .action-bar button {
+    background-color: #222a30;
+    width: 50px;
+    height: 50px;
+    border-radius: 8px;
+    border: none;
+    cursor: pointer;
+    display: inline-grid;
+    place-items: center;
+}
+
+.meet footer .action-bar #end-meet {
+    background-color: #FC5D5C;
+    width: 60px;
+    height: 60px;
+}
+
+/* Start Meet */
+.start-meet-dialog {
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    grid-row: 1 / 5;
+}
+
+.start-meet-dialog figure {
+    padding: 25px;
+}
+
+.start-meet-dialog figure img {
+    width: 100px;
+}
+
+.start-meet-dialog p {
+    color: turquoise;
+}
+
+.start-meet-dialog button {
+    border-radius: 5px;
+    border: 1px solid turquoise;
+    background-color: transparent;
+    color: turquoise;
+    padding: 5px 15px;
+    cursor: pointer;
+    margin: 10px 0px;
+}
+
+.start-meet-dialog button:hover {
+    background-color: #40e0d036;
+}
+
+@media screen and (max-width: 1100px) {
+    .meet nav > h2 {
+        font-size: 20px;
+    }
+
+    
+    .meet nav .type-badge span {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 650px) {
+    .meet nav > button:last-child {
+        display: inline-flex;
+        margin-left: auto;
+    }
+
+    
+    .meet nav .layout-actions {
+        display: none;
+    }
+}
