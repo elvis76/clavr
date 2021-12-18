@@ -2,7 +2,14 @@
     background-color: #161C21;
     height: 100vh;
     display: grid;
+    grid-template-columns: 1fr auto;
+    grid-template-rows: auto;
+    position: relative;
+}
 
+.meet section {
+    display: grid;
+    grid-template-columns: 1fr;
     grid-template-rows: auto auto 1fr auto;
 }
 
@@ -290,11 +297,78 @@
     background-color: #40e0d036;
 }
 
+.create-meeting {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #161C21;
+}
+
+.create-meeting nav h1 {
+    margin-top: 5px;
+    font-size: 24px;
+    color: #93999e;
+}
+
+.create-meeting form {
+    padding: 20px 5%;
+    display: flex;
+    flex-direction: column;
+    max-width: 550px;
+}
+
+.create-meeting form label {
+    margin-bottom: 5px;
+    color: turquoise;
+}
+
+.create-meeting form input {
+    padding: 8px;
+    border: 1px solid turquoise;
+    background-color: transparent;
+    outline: none;
+    color: turquoise;
+    margin-bottom: 15px;
+    margin-right: 10px;
+}
+
+.create-meeting form button {
+    padding: 8px;
+    background-color: turquoise;
+    border-radius: 8px;
+    cursor: pointer;
+    border: none;
+}
+
+.create-meeting form .duration-block {
+    display: flex;
+    justify-content: space-between;
+}
+
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type=number] {
+  -moz-appearance: textfield;
+}
+
+.meet aside {
+    background-color: #1F272F;
+    border-radius: 30px 0px 0px 30px;
+    width: 350px;
+}
+
 @media screen and (min-width: 1300px) {
     .meet .arena.grid {
         grid-template-columns: repeat(2, minmax(180px, 1fr));
     }
-
 }
 
 @media screen and (max-width: 1100px) {

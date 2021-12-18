@@ -67,11 +67,10 @@ const Dashboard = () => {
             <main>
                 <Routes>
                     <Route path="/meet" element={<Meet onGoing={false} toggleMenu={(value: boolean) => setMenuOpen(value)} />} />
+                    <Route path="/meet/:id" element={<Meet onGoing={true} toggleMenu={(value: boolean) => setMenuOpen(value)} />} />
                 </Routes>
             </main>
-            <aside>
-                {/* <button></button> */}
-            </aside>
+            
         </div>
     )
 }
